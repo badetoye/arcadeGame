@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/char-princess-girl.png" type="image/x-icon">
+    <title>Arcade Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <div id="startModalContainer" class="hideModal">
+      <div id="startModalContent">
+        <h1>INSTRUCTION</h1>
+        <!-- <p>The bugs are the enemies you should avoid on your way to the blue side('The Water').</p> -->
+          <p>The bugs are the <em><strong>Enemies</strong></em>. You are the <em><strong>Player</strong></em>, my friend! The goal of the player is to reach the water, without colliding into any one of the enemies. The game's highest level is 10. The level gets more difficult at every four successful pass. The higher the level, the more the bugs you encounter as the obstacle. You complete the levels when you get to level 10. That's when you are considered a winner. <em><strong>Have fun!</strong></em> </p>
+        <h2>Keyboard ShortKeys</h2>
+        <p>
+          <strong> You move with the Arrow keys <em>(up, down, left, right)</em></strong>
+        </p>
+        <h3>Select a player of your choice!</h3>
+        <div id="players">
+          <img class="selectedPlayer" src="images/char-boy.png" data-img="char-boy.png">
+          <img src="images/char-cat-girl.png" data-img="char-cat-girl.png">
+          <img src="images/char-horn-girl.png" data-img="char-horn-girl.png">
+          <img src="images/char-pink-girl.png" data-img="char-pink-girl.png">
+          <img src="images/char-princess-girl.png" data-img="char-princess-girl.png">
+        </div>
+        <button id="startGame">Start</button>
+      </div>
+    </div>
+    <div id="gameSound">
+      <audio id="bgSound" src="sounds/cautious-path-01.ogg"></audio>
+      <audio id="collideSound">
+        <source src="sounds/collide.ogg" type="audio/ogg">
+        <source src="sounds/collide.wav" type="audio/wav">
+      </audio>
+      <audio src="sounds/ta-da.wav" id="winSound"></audio>
+      <audio src="sounds/select.wav" id="selectSound"></audio>
+      <audio src="sounds/congrats.wav" id="congratSound"></audio>
+    </div>
+    <div class="scoreBoard">
+      <div id="timer">&#128338; <span id="time">00:00:00</span></div>
+      <div id="message">
+        <img id="win" class="hide" src="images/win.png" alt="good symbol">
+        <img id="lose" class="hide" src="images/lose.png" alt="bad symbol">
+      </div>
+      <div id="scoreDetail">Score: <span id="score">0</span></div>
+      <div id="level">Level: 1</div>
+      <div id="playSound">&#128266;</div>
+      <div id="muteSound" class="hide">
+        &#128263;</div>
+    </div>
+    <div id="congratsModalWrapper" class="hideModal">
+      <div id="congratsModal">
+        <h2>Congratulations!!!</h2>
+        <section class="summary">
+          <div id="timeSum"></div>
+          <div id="scoreSum"></div>
+          <div id="levelSum"></div>
+        </section>
+        <button id="replay">Play Again</button>
+      </div>
+    </div>
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/addTouch.js"></script>
+    <script src="js/engine.js"></script>
+  </body>
+
+</html>
