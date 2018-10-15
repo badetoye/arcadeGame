@@ -3,7 +3,6 @@
 
 * [Instructions](#instructions)
 * [Implementation](#implementation)
-* [How to use this game app.](#how to use this game app.)
 
 ## Instructions
 
